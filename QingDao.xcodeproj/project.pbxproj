@@ -1,0 +1,816 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E59000D1C0090B7006C155E /* QDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59000C1C0090B7006C155E /* QDBaseViewController.m */; };
+		0E5900101C0091BA006C155E /* QDNavBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59000F1C0091BA006C155E /* QDNavBaseViewController.m */; };
+		0E5900131C0098A8006C155E /* QDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900121C0098A8006C155E /* QDTabBarViewController.m */; };
+		0E5900161C0098E3006C155E /* QDFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900151C0098E3006C155E /* QDFactory.m */; };
+		0E59001F1C0195B7006C155E /* QDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59001E1C0195B7006C155E /* QDHomeViewController.m */; };
+		0E5900221C0195CE006C155E /* QDHotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900211C0195CE006C155E /* QDHotsViewController.m */; };
+		0E5900291C019663006C155E /* QDXMPPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900281C019663006C155E /* QDXMPPViewController.m */; };
+		0E59002C1C019674006C155E /* QDUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59002B1C019674006C155E /* QDUSViewController.m */; };
+		0E59002F1C0196A9006C155E /* QDShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59002E1C0196A9006C155E /* QDShakeViewController.m */; };
+		0E5900321C0196D0006C155E /* QDOnliveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900311C0196D0006C155E /* QDOnliveViewController.m */; };
+		0E5900351C0196E9006C155E /* QDToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900341C0196E9006C155E /* QDToolsViewController.m */; };
+		0E5900381C019778006C155E /* QDCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5900371C019778006C155E /* QDCircleViewController.m */; };
+		0E59003B1C0197EB006C155E /* QDGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59003A1C0197EB006C155E /* QDGuideViewController.m */; };
+		0E59003E1C02A3D6006C155E /* QDFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59003D1C02A3D6006C155E /* QDFunction.m */; };
+		0E59FFCE1C008286006C155E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFCD1C008286006C155E /* main.m */; };
+		0E59FFD11C008286006C155E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFD01C008286006C155E /* AppDelegate.m */; };
+		0E59FFD71C008286006C155E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E59FFD51C008286006C155E /* Main.storyboard */; };
+		0E59FFD91C008286006C155E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E59FFD81C008286006C155E /* Assets.xcassets */; };
+		0E59FFDC1C008286006C155E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E59FFDA1C008286006C155E /* LaunchScreen.storyboard */; };
+		0E59FFE71C008286006C155E /* QingDaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFE61C008286006C155E /* QingDaoTests.m */; };
+		0E59FFF21C008286006C155E /* QingDaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFF11C008286006C155E /* QingDaoUITests.m */; };
+		7482C40620B8F7579048C1C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D003247122CF072195231505 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E59FFE31C008286006C155E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E59FFC11C008285006C155E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E59FFC81C008286006C155E;
+			remoteInfo = QingDao;
+		};
+		0E59FFEE1C008286006C155E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E59FFC11C008285006C155E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E59FFC81C008286006C155E;
+			remoteInfo = QingDao;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E59000B1C0090B7006C155E /* QDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDBaseViewController.h; sourceTree = "<group>"; };
+		0E59000C1C0090B7006C155E /* QDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDBaseViewController.m; sourceTree = "<group>"; };
+		0E59000E1C0091BA006C155E /* QDNavBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDNavBaseViewController.h; sourceTree = "<group>"; };
+		0E59000F1C0091BA006C155E /* QDNavBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDNavBaseViewController.m; sourceTree = "<group>"; };
+		0E5900111C0098A8006C155E /* QDTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDTabBarViewController.h; sourceTree = "<group>"; };
+		0E5900121C0098A8006C155E /* QDTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDTabBarViewController.m; sourceTree = "<group>"; };
+		0E5900141C0098E3006C155E /* QDFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDFactory.h; sourceTree = "<group>"; };
+		0E5900151C0098E3006C155E /* QDFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDFactory.m; sourceTree = "<group>"; };
+		0E5900171C009A81006C155E /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		0E5900191C018515006C155E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0E59001D1C0195B7006C155E /* QDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDHomeViewController.h; sourceTree = "<group>"; };
+		0E59001E1C0195B7006C155E /* QDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDHomeViewController.m; sourceTree = "<group>"; };
+		0E5900201C0195CE006C155E /* QDHotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDHotsViewController.h; sourceTree = "<group>"; };
+		0E5900211C0195CE006C155E /* QDHotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDHotsViewController.m; sourceTree = "<group>"; };
+		0E5900271C019663006C155E /* QDXMPPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDXMPPViewController.h; sourceTree = "<group>"; };
+		0E5900281C019663006C155E /* QDXMPPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDXMPPViewController.m; sourceTree = "<group>"; };
+		0E59002A1C019674006C155E /* QDUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDUSViewController.h; sourceTree = "<group>"; };
+		0E59002B1C019674006C155E /* QDUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDUSViewController.m; sourceTree = "<group>"; };
+		0E59002D1C0196A9006C155E /* QDShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDShakeViewController.h; sourceTree = "<group>"; };
+		0E59002E1C0196A9006C155E /* QDShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDShakeViewController.m; sourceTree = "<group>"; };
+		0E5900301C0196D0006C155E /* QDOnliveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDOnliveViewController.h; sourceTree = "<group>"; };
+		0E5900311C0196D0006C155E /* QDOnliveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDOnliveViewController.m; sourceTree = "<group>"; };
+		0E5900331C0196E9006C155E /* QDToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDToolsViewController.h; sourceTree = "<group>"; };
+		0E5900341C0196E9006C155E /* QDToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDToolsViewController.m; sourceTree = "<group>"; };
+		0E5900361C019778006C155E /* QDCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDCircleViewController.h; sourceTree = "<group>"; };
+		0E5900371C019778006C155E /* QDCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDCircleViewController.m; sourceTree = "<group>"; };
+		0E5900391C0197EB006C155E /* QDGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDGuideViewController.h; sourceTree = "<group>"; };
+		0E59003A1C0197EB006C155E /* QDGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDGuideViewController.m; sourceTree = "<group>"; };
+		0E59003C1C02A3D6006C155E /* QDFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDFunction.h; sourceTree = "<group>"; };
+		0E59003D1C02A3D6006C155E /* QDFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDFunction.m; sourceTree = "<group>"; };
+		0E59FFC91C008286006C155E /* QingDao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QingDao.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E59FFCD1C008286006C155E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E59FFCF1C008286006C155E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0E59FFD01C008286006C155E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0E59FFD61C008286006C155E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E59FFD81C008286006C155E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E59FFDB1C008286006C155E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E59FFDD1C008286006C155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E59FFE21C008286006C155E /* QingDaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QingDaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E59FFE61C008286006C155E /* QingDaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QingDaoTests.m; sourceTree = "<group>"; };
+		0E59FFE81C008286006C155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E59FFED1C008286006C155E /* QingDaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QingDaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E59FFF11C008286006C155E /* QingDaoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QingDaoUITests.m; sourceTree = "<group>"; };
+		0E59FFF31C008286006C155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		629E3F20167E80825CD10024 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9975B7A426E5BA00FFA4F6A4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D003247122CF072195231505 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E59FFC61C008286006C155E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7482C40620B8F7579048C1C0 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E59FFDF1C008286006C155E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E59FFEA1C008286006C155E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E5900001C009042006C155E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900011C009042006C155E /* Home */,
+				0E5900021C009042006C155E /* Hots */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E5900011C009042006C155E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0E5900021C009042006C155E /* Hots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hots;
+			sourceTree = "<group>";
+		};
+		0E5900031C009042006C155E /* Third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		0E5900041C009042006C155E /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900081C009042006C155E /* Login */,
+				0E5900051C009042006C155E /* Circle */,
+				0E5900061C009042006C155E /* Home */,
+				0E5900071C009042006C155E /* Hots */,
+				0E5900091C009042006C155E /* More */,
+				0E59000A1C009042006C155E /* Tools */,
+			);
+			path = UIs;
+			sourceTree = "<group>";
+		};
+		0E5900051C009042006C155E /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900361C019778006C155E /* QDCircleViewController.h */,
+				0E5900371C019778006C155E /* QDCircleViewController.m */,
+			);
+			path = Circle;
+			sourceTree = "<group>";
+		};
+		0E5900061C009042006C155E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0E59001D1C0195B7006C155E /* QDHomeViewController.h */,
+				0E59001E1C0195B7006C155E /* QDHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0E5900071C009042006C155E /* Hots */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900201C0195CE006C155E /* QDHotsViewController.h */,
+				0E5900211C0195CE006C155E /* QDHotsViewController.m */,
+			);
+			path = Hots;
+			sourceTree = "<group>";
+		};
+		0E5900081C009042006C155E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900391C0197EB006C155E /* QDGuideViewController.h */,
+				0E59003A1C0197EB006C155E /* QDGuideViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0E5900091C009042006C155E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900261C01960F006C155E /* XMPP */,
+				0E5900251C019607006C155E /* US */,
+				0E5900241C0195F9006C155E /* Shake */,
+				0E5900231C0195F1006C155E /* Onlive */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		0E59000A1C009042006C155E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900331C0196E9006C155E /* QDToolsViewController.h */,
+				0E5900341C0196E9006C155E /* QDToolsViewController.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0E5900231C0195F1006C155E /* Onlive */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900301C0196D0006C155E /* QDOnliveViewController.h */,
+				0E5900311C0196D0006C155E /* QDOnliveViewController.m */,
+			);
+			name = Onlive;
+			sourceTree = "<group>";
+		};
+		0E5900241C0195F9006C155E /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+				0E59002D1C0196A9006C155E /* QDShakeViewController.h */,
+				0E59002E1C0196A9006C155E /* QDShakeViewController.m */,
+			);
+			name = Shake;
+			sourceTree = "<group>";
+		};
+		0E5900251C019607006C155E /* US */ = {
+			isa = PBXGroup;
+			children = (
+				0E59002A1C019674006C155E /* QDUSViewController.h */,
+				0E59002B1C019674006C155E /* QDUSViewController.m */,
+			);
+			name = US;
+			sourceTree = "<group>";
+		};
+		0E5900261C01960F006C155E /* XMPP */ = {
+			isa = PBXGroup;
+			children = (
+				0E5900271C019663006C155E /* QDXMPPViewController.h */,
+				0E5900281C019663006C155E /* QDXMPPViewController.m */,
+			);
+			name = XMPP;
+			sourceTree = "<group>";
+		};
+		0E59FFC01C008285006C155E = {
+			isa = PBXGroup;
+			children = (
+				0E59FFCB1C008286006C155E /* QingDao */,
+				0E59FFE51C008286006C155E /* QingDaoTests */,
+				0E59FFF01C008286006C155E /* QingDaoUITests */,
+				0E59FFCA1C008286006C155E /* Products */,
+				131DB0E94595F83A4B2B6F88 /* Pods */,
+				92A6856A02FDDB5961138CA7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E59FFCA1C008286006C155E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E59FFC91C008286006C155E /* QingDao.app */,
+				0E59FFE21C008286006C155E /* QingDaoTests.xctest */,
+				0E59FFED1C008286006C155E /* QingDaoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E59FFCB1C008286006C155E /* QingDao */ = {
+			isa = PBXGroup;
+			children = (
+				0E59FFFF1C009042006C155E /* Common */,
+				0E5900001C009042006C155E /* Model */,
+				0E5900031C009042006C155E /* Third */,
+				0E5900041C009042006C155E /* UIs */,
+				0E59FFCF1C008286006C155E /* AppDelegate.h */,
+				0E59FFD01C008286006C155E /* AppDelegate.m */,
+				0E5900191C018515006C155E /* PrefixHeader.pch */,
+				0E59FFD51C008286006C155E /* Main.storyboard */,
+				0E59FFD81C008286006C155E /* Assets.xcassets */,
+				0E59FFDA1C008286006C155E /* LaunchScreen.storyboard */,
+				0E59FFDD1C008286006C155E /* Info.plist */,
+				0E59FFCC1C008286006C155E /* Supporting Files */,
+			);
+			path = QingDao;
+			sourceTree = "<group>";
+		};
+		0E59FFCC1C008286006C155E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E59FFCD1C008286006C155E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E59FFE51C008286006C155E /* QingDaoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E59FFE61C008286006C155E /* QingDaoTests.m */,
+				0E59FFE81C008286006C155E /* Info.plist */,
+			);
+			path = QingDaoTests;
+			sourceTree = "<group>";
+		};
+		0E59FFF01C008286006C155E /* QingDaoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E59FFF11C008286006C155E /* QingDaoUITests.m */,
+				0E59FFF31C008286006C155E /* Info.plist */,
+			);
+			path = QingDaoUITests;
+			sourceTree = "<group>";
+		};
+		0E59FFFF1C009042006C155E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0E59000B1C0090B7006C155E /* QDBaseViewController.h */,
+				0E59000C1C0090B7006C155E /* QDBaseViewController.m */,
+				0E59000E1C0091BA006C155E /* QDNavBaseViewController.h */,
+				0E59000F1C0091BA006C155E /* QDNavBaseViewController.m */,
+				0E5900111C0098A8006C155E /* QDTabBarViewController.h */,
+				0E5900121C0098A8006C155E /* QDTabBarViewController.m */,
+				0E5900141C0098E3006C155E /* QDFactory.h */,
+				0E5900151C0098E3006C155E /* QDFactory.m */,
+				0E59003C1C02A3D6006C155E /* QDFunction.h */,
+				0E59003D1C02A3D6006C155E /* QDFunction.m */,
+				0E5900171C009A81006C155E /* Constant.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		131DB0E94595F83A4B2B6F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				629E3F20167E80825CD10024 /* Pods.debug.xcconfig */,
+				9975B7A426E5BA00FFA4F6A4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92A6856A02FDDB5961138CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D003247122CF072195231505 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E59FFC81C008286006C155E /* QingDao */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E59FFF61C008286006C155E /* Build configuration list for PBXNativeTarget "QingDao" */;
+			buildPhases = (
+				8C261E1A4A9F9C6BC4F5BE8E /* Check Pods Manifest.lock */,
+				0E59FFC51C008286006C155E /* Sources */,
+				0E59FFC61C008286006C155E /* Frameworks */,
+				0E59FFC71C008286006C155E /* Resources */,
+				611F25F3F6CAFF215EFF5979 /* Embed Pods Frameworks */,
+				39509C93E821C6D193D7EC2C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QingDao;
+			productName = QingDao;
+			productReference = 0E59FFC91C008286006C155E /* QingDao.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E59FFE11C008286006C155E /* QingDaoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E59FFF91C008286006C155E /* Build configuration list for PBXNativeTarget "QingDaoTests" */;
+			buildPhases = (
+				0E59FFDE1C008286006C155E /* Sources */,
+				0E59FFDF1C008286006C155E /* Frameworks */,
+				0E59FFE01C008286006C155E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E59FFE41C008286006C155E /* PBXTargetDependency */,
+			);
+			name = QingDaoTests;
+			productName = QingDaoTests;
+			productReference = 0E59FFE21C008286006C155E /* QingDaoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E59FFEC1C008286006C155E /* QingDaoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E59FFFC1C008286006C155E /* Build configuration list for PBXNativeTarget "QingDaoUITests" */;
+			buildPhases = (
+				0E59FFE91C008286006C155E /* Sources */,
+				0E59FFEA1C008286006C155E /* Frameworks */,
+				0E59FFEB1C008286006C155E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E59FFEF1C008286006C155E /* PBXTargetDependency */,
+			);
+			name = QingDaoUITests;
+			productName = QingDaoUITests;
+			productReference = 0E59FFED1C008286006C155E /* QingDaoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E59FFC11C008285006C155E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = hechuan;
+				TargetAttributes = {
+					0E59FFC81C008286006C155E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 733J239QST;
+					};
+					0E59FFE11C008286006C155E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 733J239QST;
+						TestTargetID = 0E59FFC81C008286006C155E;
+					};
+					0E59FFEC1C008286006C155E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 733J239QST;
+						TestTargetID = 0E59FFC81C008286006C155E;
+					};
+				};
+			};
+			buildConfigurationList = 0E59FFC41C008286006C155E /* Build configuration list for PBXProject "QingDao" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E59FFC01C008285006C155E;
+			productRefGroup = 0E59FFCA1C008286006C155E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E59FFC81C008286006C155E /* QingDao */,
+				0E59FFE11C008286006C155E /* QingDaoTests */,
+				0E59FFEC1C008286006C155E /* QingDaoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E59FFC71C008286006C155E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E59FFDC1C008286006C155E /* LaunchScreen.storyboard in Resources */,
+				0E59FFD91C008286006C155E /* Assets.xcassets in Resources */,
+				0E59FFD71C008286006C155E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E59FFE01C008286006C155E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E59FFEB1C008286006C155E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39509C93E821C6D193D7EC2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		611F25F3F6CAFF215EFF5979 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C261E1A4A9F9C6BC4F5BE8E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E59FFC51C008286006C155E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5900101C0091BA006C155E /* QDNavBaseViewController.m in Sources */,
+				0E5900221C0195CE006C155E /* QDHotsViewController.m in Sources */,
+				0E59003E1C02A3D6006C155E /* QDFunction.m in Sources */,
+				0E5900161C0098E3006C155E /* QDFactory.m in Sources */,
+				0E59000D1C0090B7006C155E /* QDBaseViewController.m in Sources */,
+				0E5900321C0196D0006C155E /* QDOnliveViewController.m in Sources */,
+				0E5900351C0196E9006C155E /* QDToolsViewController.m in Sources */,
+				0E5900131C0098A8006C155E /* QDTabBarViewController.m in Sources */,
+				0E59002C1C019674006C155E /* QDUSViewController.m in Sources */,
+				0E5900291C019663006C155E /* QDXMPPViewController.m in Sources */,
+				0E59003B1C0197EB006C155E /* QDGuideViewController.m in Sources */,
+				0E59FFD11C008286006C155E /* AppDelegate.m in Sources */,
+				0E59001F1C0195B7006C155E /* QDHomeViewController.m in Sources */,
+				0E5900381C019778006C155E /* QDCircleViewController.m in Sources */,
+				0E59002F1C0196A9006C155E /* QDShakeViewController.m in Sources */,
+				0E59FFCE1C008286006C155E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E59FFDE1C008286006C155E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E59FFE71C008286006C155E /* QingDaoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E59FFE91C008286006C155E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E59FFF21C008286006C155E /* QingDaoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E59FFE41C008286006C155E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E59FFC81C008286006C155E /* QingDao */;
+			targetProxy = 0E59FFE31C008286006C155E /* PBXContainerItemProxy */;
+		};
+		0E59FFEF1C008286006C155E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E59FFC81C008286006C155E /* QingDao */;
+			targetProxy = 0E59FFEE1C008286006C155E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0E59FFD51C008286006C155E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E59FFD61C008286006C155E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E59FFDA1C008286006C155E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E59FFDB1C008286006C155E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E59FFF41C008286006C155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0E59FFF51C008286006C155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E59FFF71C008286006C155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629E3F20167E80825CD10024 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = QingDao/PrefixHeader.pch;
+				INFOPLIST_FILE = QingDao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.QingDao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0E59FFF81C008286006C155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9975B7A426E5BA00FFA4F6A4 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = QingDao/PrefixHeader.pch;
+				INFOPLIST_FILE = QingDao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.QingDao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0E59FFFA1C008286006C155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QingDaoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.QingDaoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QingDao.app/QingDao";
+			};
+			name = Debug;
+		};
+		0E59FFFB1C008286006C155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QingDaoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.QingDaoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QingDao.app/QingDao";
+			};
+			name = Release;
+		};
+		0E59FFFD1C008286006C155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QingDaoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.QingDaoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QingDao;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0E59FFFE1C008286006C155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QingDaoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.QingDaoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QingDao;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E59FFC41C008286006C155E /* Build configuration list for PBXProject "QingDao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E59FFF41C008286006C155E /* Debug */,
+				0E59FFF51C008286006C155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E59FFF61C008286006C155E /* Build configuration list for PBXNativeTarget "QingDao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E59FFF71C008286006C155E /* Debug */,
+				0E59FFF81C008286006C155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E59FFF91C008286006C155E /* Build configuration list for PBXNativeTarget "QingDaoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E59FFFA1C008286006C155E /* Debug */,
+				0E59FFFB1C008286006C155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E59FFFC1C008286006C155E /* Build configuration list for PBXNativeTarget "QingDaoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E59FFFD1C008286006C155E /* Debug */,
+				0E59FFFE1C008286006C155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E59FFC11C008285006C155E /* Project object */;
+}
