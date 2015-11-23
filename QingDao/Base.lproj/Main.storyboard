@@ -119,6 +119,25 @@
             </objects>
             <point key="canvasLocation" x="215" y="3246"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="4oE-n3-Gyq">
+            <objects>
+                <viewController storyboardIdentifier="QDLoginViewController" id="ngi-qH-1AT" customClass="QDLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Glc-7z-HtW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lyz-2v-9hR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RE7-ZD-bLb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9P-E4-tiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="-263"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

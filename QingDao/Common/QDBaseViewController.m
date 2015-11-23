@@ -47,6 +47,8 @@
 -(void)showToast:(NSString *)message
 {
     [self.view makeToast:message];
+//    [self.view makeToast:message duration:2.0 position:[NSValue valueWithCGPoint:[CGPointMake(200, 200)]]];
+    
 }
 
 /*

@@ -1,25 +1,31 @@
 //
-//  QDCircleViewController.m
+//  QDLoginViewController.m
 //  QingDao
 //
-//  Created by 何川 on 15/11/22.
+//  Created by 何川 on 15/11/23.
 //  Copyright © 2015年 hechuan. All rights reserved.
 //
 
-#import "QDCircleViewController.h"
+#import "QDLoginViewController.h"
 
-@interface QDCircleViewController ()
+@interface QDLoginViewController ()
 
 @end
 
-@implementation QDCircleViewController
+@implementation QDLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self showLoadView];
-    self.titleLabel.text = @"圈子";
+    self.titleLabel.text = @"登录";
+    self.rightButton.hidden = YES;
+}
+-(void)backMethod
+{
+    [self.navigationController popViewControllerAnimated:YES];
     
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    [app.tab showOrHiddenTabbarView:NO];
 }
 
 - (void)didReceiveMemoryWarning {

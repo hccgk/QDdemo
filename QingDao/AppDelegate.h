@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QDTabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property(nonatomic,strong) QDTabBarViewController *tab;
 
 @end
 

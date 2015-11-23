@@ -36,4 +36,8 @@
 
 #define kNotificationGuideEnter @"kNotificationGuideEnter"
 
+#pragma mark -- 接口调试
+
+#define APP_ID  @"1001"
+#define APP_IDENTIFER  @"5bV9JhaMn2GJ5MZe"
 #endif /* Constant_h */

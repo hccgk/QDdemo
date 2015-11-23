@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBar.hidden = YES;
     _bottonView = [[UIView alloc]initWithFrame:CGRectMake(0,kUIScreenHeight - kUITabBarHeight
                                                           , kUIScreenWidth, kUITabBarHeight)];
     _bottonView.backgroundColor = [UIColor blueColor];
@@ -106,6 +107,17 @@
     {
         self.selectedIndex = bt.tag -1;
     }
+}
+
+-(void)showOrHiddenTabbarView:(BOOL)flag
+{
+    if (flag) {
+        _topView.hidden = YES;
+        _bottonView.hidden = YES;
+        
+    } else
+        _bottonView.hidden = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {

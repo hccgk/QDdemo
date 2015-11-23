@@ -28,6 +28,8 @@
 		0E59FFDC1C008286006C155E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E59FFDA1C008286006C155E /* LaunchScreen.storyboard */; };
 		0E59FFE71C008286006C155E /* QingDaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFE61C008286006C155E /* QingDaoTests.m */; };
 		0E59FFF21C008286006C155E /* QingDaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFF11C008286006C155E /* QingDaoUITests.m */; };
+		0EE4DC931C034E9B00985CAC /* QDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */; };
+		0EE4DC971C03561600985CAC /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4DC961C03561600985CAC /* MD5.m */; };
 		7482C40620B8F7579048C1C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D003247122CF072195231505 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,10 @@
 		0E59FFED1C008286006C155E /* QingDaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QingDaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E59FFF11C008286006C155E /* QingDaoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QingDaoUITests.m; sourceTree = "<group>"; };
 		0E59FFF31C008286006C155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EE4DC911C034E9B00985CAC /* QDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDLoginViewController.h; sourceTree = "<group>"; };
+		0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDLoginViewController.m; sourceTree = "<group>"; };
+		0EE4DC951C03561600985CAC /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		0EE4DC961C03561600985CAC /* MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
 		629E3F20167E80825CD10024 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9975B7A426E5BA00FFA4F6A4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D003247122CF072195231505 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +156,7 @@
 		0E5900031C009042006C155E /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				0EE4DC941C03561600985CAC /* MD5 */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -199,6 +206,8 @@
 			children = (
 				0E5900391C0197EB006C155E /* QDGuideViewController.h */,
 				0E59003A1C0197EB006C155E /* QDGuideViewController.m */,
+				0EE4DC911C034E9B00985CAC /* QDLoginViewController.h */,
+				0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -342,6 +351,15 @@
 				0E5900171C009A81006C155E /* Constant.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0EE4DC941C03561600985CAC /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				0EE4DC951C03561600985CAC /* MD5.h */,
+				0EE4DC961C03561600985CAC /* MD5.m */,
+			);
+			path = MD5;
 			sourceTree = "<group>";
 		};
 		131DB0E94595F83A4B2B6F88 /* Pods */ = {
@@ -557,7 +575,9 @@
 				0E5900291C019663006C155E /* QDXMPPViewController.m in Sources */,
 				0E59003B1C0197EB006C155E /* QDGuideViewController.m in Sources */,
 				0E59FFD11C008286006C155E /* AppDelegate.m in Sources */,
+				0EE4DC971C03561600985CAC /* MD5.m in Sources */,
 				0E59001F1C0195B7006C155E /* QDHomeViewController.m in Sources */,
+				0EE4DC931C034E9B00985CAC /* QDLoginViewController.m in Sources */,
 				0E5900381C019778006C155E /* QDCircleViewController.m in Sources */,
 				0E59002F1C0196A9006C155E /* QDShakeViewController.m in Sources */,
 				0E59FFCE1C008286006C155E /* main.m in Sources */,

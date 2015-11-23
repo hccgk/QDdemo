@@ -48,7 +48,7 @@
 
 -(void)enterMain
 {
-    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *stroryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     NSMutableArray *tabbarArray = [NSMutableArray array];
     NSArray *controllersStringArray = @[@"QDHomeViewController",@"QDHotsViewController",
@@ -56,14 +56,14 @@
                                         @"QDXMPPViewController",@"QDShakeViewController",
                                         @"QDOnliveViewController",@"QDUSViewController"];
     for (NSString *vcName in controllersStringArray) {
-        Class vc = [main instantiateViewControllerWithIdentifier:vcName];
+        Class vc = [stroryboard instantiateViewControllerWithIdentifier:vcName];
         UINavigationController  *nav = [[UINavigationController alloc]initWithRootViewController:vc];
         [tabbarArray addObject:nav];
     }
     
-    QDTabBarViewController *tab = [[QDTabBarViewController alloc]init];
-    tab.viewControllers = tabbarArray;
-    self.window.rootViewController = tab;
+     _tab = [[QDTabBarViewController alloc]init];
+    _tab.viewControllers = tabbarArray;
+    self.window.rootViewController = _tab;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

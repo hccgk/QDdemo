@@ -10,4 +10,5 @@
 
 @interface QDTabBarViewController : UITabBarController
 
+-(void)showOrHiddenTabbarView:(BOOL)flag;
 @end
