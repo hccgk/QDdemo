@@ -21,8 +21,8 @@
     [self performSelector:@selector(dismissLoadView) withObject:nil afterDelay:2.0];
     [self showToast:@"testme"];
     self.leftButton.hidden = YES;
-
-
+    
+    NSLog(@"abc");
 }
 
 - (void)didReceiveMemoryWarning {
