@@ -16,9 +16,33 @@
                     <view key="view" contentMode="scaleToFill" id="pIp-6g-ytM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tbu-cf-fQT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.487690515879033" green="1" blue="0.3880025600557222" alpha="1" colorSpace="calibratedRGB"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SNX-gP-Day">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="sectionIndexBackgroundColor" red="0.48769051590000001" green="1" blue="0.3880025601" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableView>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tbu-cf-fQT" secondAttribute="trailing" id="76C-fR-RM7"/>
+                            <constraint firstItem="Tbu-cf-fQT" firstAttribute="top" secondItem="tsn-sr-5FJ" secondAttribute="bottom" constant="44" id="LM8-nZ-bWG"/>
+                            <constraint firstItem="Tbu-cf-fQT" firstAttribute="leading" secondItem="pIp-6g-ytM" secondAttribute="leading" id="Zex-jE-FJC"/>
+                            <constraint firstItem="XTY-6f-mki" firstAttribute="top" secondItem="Tbu-cf-fQT" secondAttribute="bottom" id="xKL-kM-bS5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SNX-gP-Day" id="IiP-fE-zCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqH-cA-bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

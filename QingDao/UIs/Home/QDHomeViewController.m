@@ -12,8 +12,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "QDHomeModel.h"
 #import "QDFocus.h"
-@interface QDHomeViewController ()
-
+#import "QDAdsTableViewCell.h"
+@interface QDHomeViewController ()<CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) QDAdsTableViewCell *header;
 @end
 
 @implementation QDHomeViewController
@@ -27,13 +29,18 @@
     self.leftButton.hidden = YES;
     
     [self loadData];
-    
+    //定位
     [QDLocaltionManager localSuccess:^(CLLocationCoordinate2D coordinate2D) {
         DSLog(@"Localtion:%f",coordinate2D.latitude);
     } withError:^(NSError *error) {
         DSLog(@"Localtion Error:%@",error);
     }];
-     
+     //注册cell
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    //给table设置header
+    _header = [[NSBundle mainBundle]loadNibNamed:@"QDAdsTableViewCell" owner:nil options:nil].lastObject;
+    self.tableView.tableHeaderView = _header;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 
@@ -79,6 +86,7 @@
       //  DSLog(@"%@",Model);
         QDFocus *f = Model.focus.list[0];
         DSLog(@"%@",f.title);
+        _header.model = Model;
     } withFailBlock:^(NSError *error) {
         DSLog(@"%@",error);
     }];
@@ -98,5 +106,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma UITableViewDatasource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 3;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *resuse = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:resuse forIndexPath:indexPath];
+    return cell;
+}
 @end
+
+
+
+
+
+
+
+
+
+

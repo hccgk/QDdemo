@@ -8,7 +8,10 @@
 
 #import <JSONModel/JSONModel.h>
 #import "QDfocusList.h"
+#import "QDGroupList.h"
 @interface QDHomeModel : JSONModel
 
 @property (nonatomic ,strong) QDfocusList *focus;
+@property (nonatomic ,strong) QDGroupList *group;
+
 @end

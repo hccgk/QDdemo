@@ -21,22 +21,30 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - CocoaSecurity (1.2.4)
+  - iCarousel (1.8.2)
   - JSONModel (1.1.2)
   - MBProgressHUD (0.9.1)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - Toast (3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CocoaSecurity
+  - iCarousel
   - JSONModel
   - MBProgressHUD (~> 0.9.1)
+  - SDWebImage
   - Toast (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   Toast: 32c59229abfcf41850162b83bb9259dc84372473
 
 COCOAPODS: 0.39.0
