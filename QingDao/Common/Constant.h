@@ -40,4 +40,6 @@
 
 #define APP_ID  @"1001"
 #define APP_IDENTIFER  @"5bV9JhaMn2GJ5MZe"
+
+#define kBaseURL        @"http://www.qd-life.com/"
 #endif /* Constant_h */

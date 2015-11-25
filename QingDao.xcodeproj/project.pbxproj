@@ -28,6 +28,13 @@
 		0E59FFDC1C008286006C155E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E59FFDA1C008286006C155E /* LaunchScreen.storyboard */; };
 		0E59FFE71C008286006C155E /* QingDaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFE61C008286006C155E /* QingDaoTests.m */; };
 		0E59FFF21C008286006C155E /* QingDaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFF11C008286006C155E /* QingDaoUITests.m */; };
+		0E7C41A11C048152005B3FCA /* QDLocaltionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C41A01C048152005B3FCA /* QDLocaltionManager.m */; };
+		0E7C41A41C04884D005B3FCA /* QDHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C41A31C04884D005B3FCA /* QDHttpClient.m */; };
+		0E7C41A71C0488B5005B3FCA /* QDAFHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C41A61C0488B5005B3FCA /* QDAFHttpClient.m */; };
+		0E7C41AA1C048BCE005B3FCA /* QDFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C41A91C048BCE005B3FCA /* QDFocus.m */; };
+		0E7C41AD1C048C26005B3FCA /* QDfocusList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C41AC1C048C26005B3FCA /* QDfocusList.m */; };
+		0E7C41B01C052EB6005B3FCA /* QDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C41AF1C052EB6005B3FCA /* QDHomeModel.m */; };
+		0E7C41B21C053D51005B3FCA /* home.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7C41B11C053D51005B3FCA /* home.plist */; };
 		0EE4DC931C034E9B00985CAC /* QDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */; };
 		0EE4DC971C03561600985CAC /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4DC961C03561600985CAC /* MD5.m */; };
 		7482C40620B8F7579048C1C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D003247122CF072195231505 /* libPods.a */; };
@@ -95,6 +102,19 @@
 		0E59FFED1C008286006C155E /* QingDaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QingDaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E59FFF11C008286006C155E /* QingDaoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QingDaoUITests.m; sourceTree = "<group>"; };
 		0E59FFF31C008286006C155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E7C419F1C048152005B3FCA /* QDLocaltionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDLocaltionManager.h; sourceTree = "<group>"; };
+		0E7C41A01C048152005B3FCA /* QDLocaltionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDLocaltionManager.m; sourceTree = "<group>"; };
+		0E7C41A21C04884D005B3FCA /* QDHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDHttpClient.h; sourceTree = "<group>"; };
+		0E7C41A31C04884D005B3FCA /* QDHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDHttpClient.m; sourceTree = "<group>"; };
+		0E7C41A51C0488B5005B3FCA /* QDAFHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDAFHttpClient.h; sourceTree = "<group>"; };
+		0E7C41A61C0488B5005B3FCA /* QDAFHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDAFHttpClient.m; sourceTree = "<group>"; };
+		0E7C41A81C048BCE005B3FCA /* QDFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDFocus.h; sourceTree = "<group>"; };
+		0E7C41A91C048BCE005B3FCA /* QDFocus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDFocus.m; sourceTree = "<group>"; };
+		0E7C41AB1C048C26005B3FCA /* QDfocusList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDfocusList.h; sourceTree = "<group>"; };
+		0E7C41AC1C048C26005B3FCA /* QDfocusList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDfocusList.m; sourceTree = "<group>"; };
+		0E7C41AE1C052EB6005B3FCA /* QDHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDHomeModel.h; sourceTree = "<group>"; };
+		0E7C41AF1C052EB6005B3FCA /* QDHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDHomeModel.m; sourceTree = "<group>"; };
+		0E7C41B11C053D51005B3FCA /* home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = home.plist; sourceTree = "<group>"; };
 		0EE4DC911C034E9B00985CAC /* QDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDLoginViewController.h; sourceTree = "<group>"; };
 		0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDLoginViewController.m; sourceTree = "<group>"; };
 		0EE4DC951C03561600985CAC /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
@@ -142,6 +162,12 @@
 		0E5900011C009042006C155E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0E7C41A81C048BCE005B3FCA /* QDFocus.h */,
+				0E7C41A91C048BCE005B3FCA /* QDFocus.m */,
+				0E7C41AB1C048C26005B3FCA /* QDfocusList.h */,
+				0E7C41AC1C048C26005B3FCA /* QDfocusList.m */,
+				0E7C41AE1C052EB6005B3FCA /* QDHomeModel.h */,
+				0E7C41AF1C052EB6005B3FCA /* QDHomeModel.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -304,6 +330,7 @@
 				0E59FFD81C008286006C155E /* Assets.xcassets */,
 				0E59FFDA1C008286006C155E /* LaunchScreen.storyboard */,
 				0E59FFDD1C008286006C155E /* Info.plist */,
+				0E7C41B11C053D51005B3FCA /* home.plist */,
 				0E59FFCC1C008286006C155E /* Supporting Files */,
 			);
 			path = QingDao;
@@ -348,6 +375,12 @@
 				0E5900151C0098E3006C155E /* QDFactory.m */,
 				0E59003C1C02A3D6006C155E /* QDFunction.h */,
 				0E59003D1C02A3D6006C155E /* QDFunction.m */,
+				0E7C419F1C048152005B3FCA /* QDLocaltionManager.h */,
+				0E7C41A01C048152005B3FCA /* QDLocaltionManager.m */,
+				0E7C41A21C04884D005B3FCA /* QDHttpClient.h */,
+				0E7C41A31C04884D005B3FCA /* QDHttpClient.m */,
+				0E7C41A51C0488B5005B3FCA /* QDAFHttpClient.h */,
+				0E7C41A61C0488B5005B3FCA /* QDAFHttpClient.m */,
 				0E5900171C009A81006C155E /* Constant.h */,
 			);
 			path = Common;
@@ -489,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E59FFDC1C008286006C155E /* LaunchScreen.storyboard in Resources */,
+				0E7C41B21C053D51005B3FCA /* home.plist in Resources */,
 				0E59FFD91C008286006C155E /* Assets.xcassets in Resources */,
 				0E59FFD71C008286006C155E /* Main.storyboard in Resources */,
 			);
@@ -564,9 +598,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5900101C0091BA006C155E /* QDNavBaseViewController.m in Sources */,
+				0E7C41A41C04884D005B3FCA /* QDHttpClient.m in Sources */,
 				0E5900221C0195CE006C155E /* QDHotsViewController.m in Sources */,
 				0E59003E1C02A3D6006C155E /* QDFunction.m in Sources */,
 				0E5900161C0098E3006C155E /* QDFactory.m in Sources */,
+				0E7C41A11C048152005B3FCA /* QDLocaltionManager.m in Sources */,
 				0E59000D1C0090B7006C155E /* QDBaseViewController.m in Sources */,
 				0E5900321C0196D0006C155E /* QDOnliveViewController.m in Sources */,
 				0E5900351C0196E9006C155E /* QDToolsViewController.m in Sources */,
@@ -574,9 +610,13 @@
 				0E59002C1C019674006C155E /* QDUSViewController.m in Sources */,
 				0E5900291C019663006C155E /* QDXMPPViewController.m in Sources */,
 				0E59003B1C0197EB006C155E /* QDGuideViewController.m in Sources */,
+				0E7C41A71C0488B5005B3FCA /* QDAFHttpClient.m in Sources */,
+				0E7C41AD1C048C26005B3FCA /* QDfocusList.m in Sources */,
+				0E7C41B01C052EB6005B3FCA /* QDHomeModel.m in Sources */,
 				0E59FFD11C008286006C155E /* AppDelegate.m in Sources */,
 				0EE4DC971C03561600985CAC /* MD5.m in Sources */,
 				0E59001F1C0195B7006C155E /* QDHomeViewController.m in Sources */,
+				0E7C41AA1C048BCE005B3FCA /* QDFocus.m in Sources */,
 				0EE4DC931C034E9B00985CAC /* QDLoginViewController.m in Sources */,
 				0E5900381C019778006C155E /* QDCircleViewController.m in Sources */,
 				0E59002F1C0196A9006C155E /* QDShakeViewController.m in Sources */,

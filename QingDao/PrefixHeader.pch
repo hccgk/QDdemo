@@ -15,4 +15,7 @@
 #import "Constant.h"
 #import "AppDelegate.h"
 #import <AFNetworking.h>
+#import "QDFunction.h"
+#import "JSONModel.h"
+#import "QDAFHttpClient.h"
 #endif /* PrefixHeader_pch */

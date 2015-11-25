@@ -7,6 +7,7 @@
 //
 
 #import "QDFunction.h"
+#import "MD5.h"
 
 @implementation QDFunction
 
@@ -14,6 +15,26 @@
 {
     [[NSUserDefaults standardUserDefaults] setBool:vale forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
++ (NSString *)getTime
+{
+ 
+    return  [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    
+}
+
++ (NSString *)signMD5String:(NSArray *)array
+{
+    NSMutableString *signStr = [NSMutableString string];
+    [array enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+
+        [signStr appendString:obj];
+    
+    }];
+    
+    return  [MD5 MD5Encrypt:signStr];
     
 }
 

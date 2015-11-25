@@ -35,7 +35,7 @@
     _titleLabel.font = [UIFont systemFontOfSize:19];
     [_navView addSubview:_titleLabel];
     //右边按钮
-    _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _rightButton = [    UIButton buttonWithType:UIButtonTypeCustom];
     [_rightButton addTarget:self action:@selector(loginMethod) forControlEvents:UIControlEventTouchUpInside];
     [_navView addSubview:_rightButton];
     

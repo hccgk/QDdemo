@@ -12,4 +12,8 @@
 
 +(void)saveValue:(BOOL)vale forKey:(NSString *)key;
 
+//返回一个时间戳
++ (NSString *)getTime;
+
++ (NSString *)signMD5String:(NSArray *)array;
 @end

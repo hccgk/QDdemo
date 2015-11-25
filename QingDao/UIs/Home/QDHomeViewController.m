@@ -8,7 +8,10 @@
 
 #import "QDHomeViewController.h"
 #import "QDLoginViewController.h"
-#import "MD5.h"
+#import "QDLocaltionManager.h"
+#import <CoreLocation/CoreLocation.h>
+#import "QDHomeModel.h"
+#import "QDFocus.h"
 @interface QDHomeViewController ()
 
 @end
@@ -24,6 +27,13 @@
     self.leftButton.hidden = YES;
     
     [self loadData];
+    
+    [QDLocaltionManager localSuccess:^(CLLocationCoordinate2D coordinate2D) {
+        DSLog(@"Localtion:%f",coordinate2D.latitude);
+    } withError:^(NSError *error) {
+        DSLog(@"Localtion Error:%@",error);
+    }];
+     
 }
 
 
@@ -37,31 +47,40 @@
 
 -(void)loadData
 {
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL
-                                                                                   URLWithString:@"http://www.qd-life.com/?anu=api/1/index/get_index_info"]];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL
+//                                                                                   URLWithString:@"http://www.qd-life.com/?anu=api/1/index/get_index_info"]];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     //拼接参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@"120.38" forKey:@"lon"];
     [params setValue:@"36.06" forKey:@"lat"];
-    NSString *time = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
-    [params setValue:time forKey:@"time"];
-    NSString *signStr = [NSString stringWithFormat:@"%@%@%@%@%@",
-                         APP_ID,params[@"lon"],params[@"lat"],params[@"time"],
-                         APP_IDENTIFER];
     
-    NSString *md5String = [MD5 MD5Encrypt:signStr];
-    [params setValue:md5String forKey:@"sign"];
+   // NSString *time = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    [params setValue:[QDFunction getTime] forKey:@"time"];
+    //NSString *signStr = [NSString stringWithFormat:@"%@%@%@%@%@",
+//                         APP_ID,params[@"lon"],params[@"lat"],params[@"time"],
+//                         APP_IDENTIFER];
+     //NSString *md5String = [MD5 MD5Encrypt:signStr];
+    NSArray *temp  = @[APP_ID,params[@"lon"],params[@"lat"],params[@"time"],APP_IDENTIFER];
+    
+    [params setValue:[QDFunction signMD5String:temp] forKey:@"sign"];
     [params setValue:APP_ID forKey:@"app_id"];
     //打印参数
     DSLog(@"params:%@",params);
     //请求
-    [manager GET:@"" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        DSLog(@"responseObject:%@",responseObject);
-        NSString *str = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        DSLog(@"UTF8responseObject:%@",str);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        DSLog(@"NSError:%@",error);
+//    [manager GET:@"" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        DSLog(@"responseObject:%@",responseObject);
+//        NSString *str = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+//        DSLog(@"UTF8responseObject:%@",str);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        DSLog(@"NSError:%@",error);
+//    }];
+    [QDAFHttpClient getHomewithParams:params withSuccessBlock:^(QDHomeModel *Model) {
+      //  DSLog(@"%@",Model);
+        QDFocus *f = Model.focus.list[0];
+        DSLog(@"%@",f.title);
+    } withFailBlock:^(NSError *error) {
+        DSLog(@"%@",error);
     }];
 }
 
