@@ -29,6 +29,10 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="sectionIndexBackgroundColor" red="0.48769051590000001" green="1" blue="0.3880025601" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nxb-TO-Lmi" id="lU2-yS-Zu4"/>
+                                    <outlet property="delegate" destination="Nxb-TO-Lmi" id="uic-S3-bzX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>

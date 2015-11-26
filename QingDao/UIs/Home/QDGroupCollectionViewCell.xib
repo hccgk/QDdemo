@@ -8,20 +8,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="QDGroupCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="76"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="80" height="76"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-uc-DWG">
-                        <rect key="frame" x="8" y="4" width="64" height="49"/>
+                        <rect key="frame" x="8" y="0.0" width="64" height="49"/>
                         <animations/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwi-sv-OOF">
-                        <rect key="frame" x="19" y="57" width="42" height="21"/>
+                        <rect key="frame" x="19" y="53" width="42" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -29,6 +29,12 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
+            <size key="customSize" width="80" height="76"/>
+            <connections>
+                <outlet property="iconImage" destination="zc6-uc-DWG" id="6tt-Zn-jeg"/>
+                <outlet property="label" destination="fwi-sv-OOF" id="dBA-Zt-aMK"/>
+            </connections>
+            <point key="canvasLocation" x="205" y="462"/>
         </collectionViewCell>
     </objects>
 </document>

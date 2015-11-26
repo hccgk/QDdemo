@@ -8,7 +8,6 @@
 
 #import "QDAdsTableViewCell.h"
 #import "iCarousel.h"
-#import "QDFocus.h"
 #import  <UIImageView+WebCache.h>
 @interface QDAdsTableViewCell()<iCarouselDelegate,iCarouselDataSource>
 @property (weak, nonatomic) IBOutlet iCarousel *carousel;
@@ -16,20 +15,30 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, strong) NSMutableArray *items;
 @property(nonatomic,assign)BOOL wrap;
+@property (nonatomic, strong) NSTimer *timer;
 
 
 @end
 
 @implementation QDAdsTableViewCell
 
--(void)setModel:(QDHomeModel * )model
+-(void)setList:(QDFocusList *)list
 {
-    _model = model;
+    _list = list;
     
+    if (_list.list.count <= 0) {
+        return;
+    }
     //page
-    _pageControl.numberOfPages = [_model.focus.list count];
+    _pageControl.numberOfPages = [_list.list count];
     //reload
     [_carousel reloadData];
+    
+    QDFocusModel *model = _list.list[0];
+    _titleLabel.text = model.title;
+    _pageControl.currentPage = 0;
+    
+    [self startTimer];
     
 }
 
@@ -91,33 +100,22 @@
 
 - (NSInteger)numberOfItemsInCarousel:(__unused iCarousel *)carousel
 {
-    
-    NSLog(@"数量是:%lu",(unsigned long)[_model.focus.list count]);
 
-    return (NSInteger)[_model.focus.list count];
-    //return [_model.focus.list count];
+    return (NSInteger)[self.list.list count];
+
 }
 - (UIView *)carousel:(__unused iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
   //  UILabel *label = nil;
     if (view ==nil) {
         //instance
-        QDFocus *fouces = _model.focus.list[index];
+        QDFocusModel *model = _list.list[index];
         //image
         view = [[UIImageView alloc] initWithFrame:self.bounds];
         
-        [((UIImageView*)view) sd_setImageWithURL:[NSURL URLWithString:fouces.cover]];
+        [((UIImageView*)view) sd_setImageWithURL:[NSURL URLWithString:model.cover]];
         //title
-        _titleLabel.text = fouces.title;
-        //page
-        _pageControl.currentPage = index;
-        view.contentMode = UIViewContentModeScaleToFill;
     }
-    else
-    {
-        
-    }
-    view.backgroundColor = [UIColor redColor];
     return view;
 }
 
@@ -125,7 +123,7 @@
 - (NSInteger)numberOfPlaceholdersInCarousel:(__unused iCarousel *)carousel
 {
     //note: placeholder views are only displayed on some carousels if wrapping is disabled
-    return 2;
+    return 1;
 }
 - (UIView *)carousel:(__unused iCarousel *)carousel placeholderViewAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
@@ -137,25 +135,14 @@
         //this `if (view == nil) {...}` statement because the view will be
         //recycled and used with other index values later
         //获取到 实例
-        QDFocus *focus = _model.focus.list[index];
+        QDFocusModel *model = _list.list[index];
+
         view = [[UIImageView alloc] initWithFrame:self.bounds];
-        [((UIImageView *)view) sd_setImageWithURL:[NSURL URLWithString:focus.cover]];
+        [((UIImageView *)view) sd_setImageWithURL:[NSURL URLWithString:model.cover]];
         
         view.contentMode = UIViewContentModeCenter;
-        
-        //设置标题
-        _titleLabel.text = focus.title;
-        //修改page的现实
-        _pageControl.currentPage = index;
-        
     }
-    else
-    {
-    }
-    //更改背景颜色
-    view.backgroundColor = [UIColor redColor];
-    
-    return view;
+        return view;
 }
 
 
@@ -165,20 +152,40 @@
 #pragma iCarouselDelegate
 - (void)carousel:(__unused iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
-    NSNumber *item = (_model.focus.list)[(NSUInteger)index];
+    NSNumber *item = (self.list.list)[(NSUInteger)index];
     NSLog(@"Tapped view Nmuber:%@",item);
 }
 - (void)carouselCurrentItemIndexDidChange:(__unused iCarousel *)carousel
 {
     NSLog(@"Index: %@", @(self.carousel.currentItemIndex));
-    QDFocus *focus = _model.focus.list[self.carousel.currentItemIndex];
+    QDFocusModel *focus = self.list.list[self.carousel.currentItemIndex];
     //设置标题
     _titleLabel.text = focus.title;
     
     //修改page的现实
     _pageControl.currentPage = self.carousel.currentItemIndex;
 }
+#pragma 定时
 
+-(void)startTimer
+{
+    if (self.timer) {
+        return;
+    }
+    self.timer = [NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(autoRun) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+-(void)stopTimer
+{
+    if ([_timer isValid]) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+-(void)autoRun
+{
+    [self.carousel scrollToItemAtIndex:(self.carousel.currentItemIndex+1)%_list.list.count animated:YES];
+}
 @end
 
 

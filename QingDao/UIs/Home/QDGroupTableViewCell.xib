@@ -23,6 +23,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="iLt-HE-hCH"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="xxj-4Z-RMu"/>
+                        </connections>
                     </collectionView>
                 </subviews>
                 <animations/>
@@ -34,6 +38,10 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="collectionView" destination="e0A-pQ-782" id="0Ia-27-9iU"/>
+                <outlet property="flowLayout" destination="UVO-fH-KBB" id="T7Y-bn-tTr"/>
+            </connections>
             <point key="canvasLocation" x="190.5" y="279.5"/>
         </tableViewCell>
     </objects>

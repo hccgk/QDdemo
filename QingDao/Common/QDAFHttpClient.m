@@ -8,6 +8,11 @@
 
 #import "QDAFHttpClient.h"
 #import "QDHomeModel.h"
+
+@interface QDAFHttpClient()
+@property (nonatomic, strong) QDHomeModel *homeModel;
+
+@end
 @implementation QDAFHttpClient
 
 +(id)shareInstance
@@ -71,8 +76,8 @@ withSuccessBlock:(successLoadData)success
     [self getURL:@"?anu=api/1/index/get_index_info" withParams:param withSuccessBlock:^(id JSON) {
         NSString *path =[[NSBundle mainBundle]pathForResource:@"home" ofType:@"plist"];
         NSDictionary *dic = [[NSDictionary alloc]initWithContentsOfFile:path];
-        QDHomeModel *model = [[QDHomeModel alloc]initWithDictionary:dic error:nil];
-        success(model);
+        _homeModel = [[QDHomeModel alloc]initWithDictionary:dic error:nil];
+        success(_homeModel);
     } withFailBlock:failed];
 }
 

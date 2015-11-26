@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QDHomeModel.h"
 @interface QDGroupCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) QDGroupModel *model;
 @end

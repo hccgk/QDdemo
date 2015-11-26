@@ -10,5 +10,5 @@
 #import "QDHomeModel.h"
 @interface QDAdsTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) QDHomeModel *model;
+@property (nonatomic, strong) QDFocusList *list;
 @end
