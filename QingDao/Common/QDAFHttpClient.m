@@ -15,6 +15,7 @@
 @end
 @implementation QDAFHttpClient
 
+//2.
 +(id)shareInstance
 {
     static QDAFHttpClient *client = nil;
@@ -27,6 +28,7 @@
     return client;
 }
 
+//4.
 -(void)getURL:(NSString*)url
    withParams:(NSDictionary*)param
 withSuccessBlock:(successLoadData)success
@@ -34,6 +36,7 @@ withFailBlock:(failLoadData)failed
 {
     [self GET:url parameters:param success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         success(responseObject);
+       // NSLog(@"responseObjectresponseObjectresponseObject:%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failed(error);
     }];
@@ -62,6 +65,7 @@ withSuccessBlock:(successLoadData)success
     
 }
 
+//1.
 +(void)getHomewithParams:(NSDictionary*)param
         withSuccessBlock:(successLoadData)success
            withFailBlock:(failLoadData)failed
@@ -69,11 +73,12 @@ withSuccessBlock:(successLoadData)success
     [[self shareInstance]getHomewithParams:param withSuccessBlock:success
                              withFailBlock:failed];
 }
+//3.
 -(void)getHomewithParams:(NSDictionary*)param
          withSuccessBlock:(successLoadData)success
             withFailBlock:(failLoadData)failed
 {
-    [self getURL:@"?anu=api/1/index/get_index_info" withParams:param withSuccessBlock:^(id JSON) {
+    [self getURL:@"?anu=api/1/index/get_index_info" withParams:param withSuccessBlock:^(id data) {
         NSString *path =[[NSBundle mainBundle]pathForResource:@"home" ofType:@"plist"];
         NSDictionary *dic = [[NSDictionary alloc]initWithContentsOfFile:path];
         _homeModel = [[QDHomeModel alloc]initWithDictionary:dic error:nil];

@@ -67,7 +67,7 @@
                 <outlet property="pageControl" destination="VcV-sf-HiO" id="Jde-JY-eJr"/>
                 <outlet property="titleLabel" destination="2MW-DG-z4m" id="jhL-bn-0AQ"/>
             </connections>
-            <point key="canvasLocation" x="541" y="843"/>
+            <point key="canvasLocation" x="736" y="753"/>
         </tableViewCell>
     </objects>
 </document>

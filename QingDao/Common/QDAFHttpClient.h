@@ -8,7 +8,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-typedef void(^successLoadData)(id JSON);
+typedef void(^successLoadData)(id QDHomeModel);
 typedef void(^failLoadData)(NSError *error);
 
 

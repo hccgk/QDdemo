@@ -13,10 +13,13 @@
 #import "QDHomeModel.h"
 #import "QDAdsTableViewCell.h"
 #import "QDGroupTableViewCell.h"
-@interface QDHomeViewController ()<CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource,QDGroupTableViewCellDelegate>
+#import "QDFamousTableViewCell.h"
+#import "QDGuessTableViewCell.h"
+@interface QDHomeViewController ()<CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource,QDGroupTableViewCellDelegate,QDFamousTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) QDAdsTableViewCell *header;
 @property (nonatomic, strong) QDGroupTableViewCell *gCell;
+@property (nonatomic, strong) QDFamousTableViewCell *fCell;
 @property (nonatomic,strong) QDHomeModel *homeModel;
 @end
 
@@ -24,14 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self loadData];
+
     [self showLoadView];
-    [self performSelector:@selector(dismissLoadView) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(dismissLoadView) withObject:nil afterDelay:1.0];
     [self showToast:@"testme"];//为什么没有显示
     self.leftButton.hidden = YES;
   //  self.tableView.delegate = self;
   //  self.tableView.dataSource = self;
-    [self loadData];
     //定位
     [QDLocaltionManager localSuccess:^(CLLocationCoordinate2D coordinate2D) {
         DSLog(@"Localtion:%f",coordinate2D.latitude);
@@ -91,6 +94,8 @@
         _homeModel = data;
         QDFocusList *f = data.focus;
         _header.list = f;
+        _fCell.list = data.famous;
+        [_tableView reloadData];
 
     } withFailBlock:^(NSError *error) {
         DSLog(@"%@",error);
@@ -114,7 +119,7 @@
 #pragma UITableViewDatasource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -123,8 +128,9 @@
     }else if (section == 2){
         return _homeModel.guess.list.count;
     }else
-        return 0;}
-
+        return 0;
+   // return 1;
+}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    static NSString *resuse = @"cell";
@@ -150,32 +156,46 @@
 
 
     }
-//    else
-//        if (indexPath.section == 1) {
-//            //
-//            static NSString *identifer = @"QDGroupTableViewCell";
-//            
-//            QDGroupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
-//            
-//            if ( cell == nil) {
-//                cell = [[[UINib nibWithNibName:identifer bundle:nil]instantiateWithOwner:self options:nil]objectAtIndex:0];
-//            }
-//            
-//            if (_homeModel != nil) {
-//                
-//                cell.list = _homeModel.group;
-//                cell.delegate = self;
-//                
-//            }
-//            return cell;
-//
-//        }
-//    else
-//        if (indexPath.section ==2) {
-//            //
-//            return cell;
-//
-//        }
+    else
+        if (indexPath.section == 1) {
+            //
+            static NSString *identifer = @"QDFamousTableViewCell";
+            
+            QDFamousTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+            
+            if ( cell == nil) {
+                cell = [[[UINib nibWithNibName:identifer bundle:nil]instantiateWithOwner:self options:nil]objectAtIndex:0];
+            }
+            
+            if (_homeModel != nil) {
+                
+                cell.list = _homeModel.famous;
+                cell.delegate = self;
+                
+            }
+            return cell;
+
+        }
+    else
+        if (indexPath.section ==2) {
+            //
+            static NSString *identifer = @"QDGuessTableViewCell";
+            
+            QDGuessTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+            
+            if ( cell == nil) {
+                cell = [[[UINib nibWithNibName:identifer bundle:nil]instantiateWithOwner:self options:nil]objectAtIndex:0];
+            }
+            
+            if (_homeModel != nil) {
+                
+                cell.model = _homeModel.guess.list[0];
+               // cell.delegate = self;
+                
+            }
+            return cell;
+
+        }
     else
         return NULL;
    
@@ -192,13 +212,57 @@
         return 105;
 }
 
+#pragma UITableViewDelegate
+
+#define kUITableViewHeightForHeader 78/2.0
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0 ) {
+        return 0;
+    }
+    else
+        return kUITableViewHeightForHeader;
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kUIScreenWidth, kUITableViewHeightForHeader)];
+    //view.backgroundColor = [UIColor blackColor];
+    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kUIScreenWidth, 6)];
+    line.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:line];
+    
+    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 100, 30)];
+    
+    title.textColor = [UIColor colorWithRed:233/255.0 green:76/255.0 blue:80/255.0 alpha:1.0];
+    
+    [view addSubview:title];
+    
+    UIView *sep = [[UIView alloc]initWithFrame:CGRectMake(0, kUITableViewHeightForHeader - 0.5, kUIScreenWidth, 0.5)];
+    sep.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:sep];
+    
+    if (section == 1) {
+        title.text = @"名店推荐";
+    }else if (section == 2){
+        title.text = @"猜你喜欢";
+    }
+    
+    return view;
+}
+
 #pragma 分组代理方法
 - (void)didItemSelected:(NSInteger)index{
     
     NSLog(@"我点击了第%ld个",index);
     
 }
+- (void)didFamousItemClick:(NSInteger)index
+{
+    NSLog(@"我点击了名店的第%ld个",index);
 
+}
 @end
 
 
