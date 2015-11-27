@@ -10,6 +10,8 @@
 
 typedef void(^successLoadData)(id QDHomeModel);
 typedef void(^failLoadData)(NSError *error);
+typedef void (^errorBlock)(NSString *message);
+
 
 
 @interface QDAFHttpClient : AFHTTPSessionManager
@@ -30,4 +32,9 @@ withFailBlock:(failLoadData)failed;
 withSuccessBlock:(successLoadData)success
  withFailBlock:(failLoadData)failed;
 
++ (void)postUrlString:(NSString *)url
+            withParam:(NSDictionary *)param
+     withSuccessBlock:(successLoadData)success
+      withFailedBlock:(failLoadData)failed
+       withErrorBlock:(errorBlock)error;
 @end

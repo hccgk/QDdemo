@@ -102,6 +102,30 @@ withFailBlock:(failLoadData)failed
     }];
 }
 
-
++ (void)postUrlString:(NSString *)url
+            withParam:(NSDictionary *)param
+     withSuccessBlock:(successLoadData)success
+      withFailedBlock:(failLoadData)failed
+       withErrorBlock:(errorBlock)error{
+    
+    [[self shareInstance] POST:url parameters:param success:^(NSURLSessionDataTask *task, NSDictionary  *responseObject) {
+        
+        NSString *status = responseObject[@"status"];
+        NSLog(@"请求成功,但是不一定正确,服务器有响应");
+        if ([status isEqualToString:@"success"]) {
+            success(responseObject);
+            
+        }else if ([status isEqualToString:@"failed"]){
+            error(@"there is something wrong with the request");
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        failed(error);
+        
+    }];
+    
+}
 
 @end

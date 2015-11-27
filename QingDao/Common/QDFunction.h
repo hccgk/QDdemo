@@ -16,4 +16,11 @@
 + (NSString *)getTime;
 
 + (NSString *)signMD5String:(NSArray *)array;
+
++ (BOOL)getBooleaValueFromKey:(NSString *)key;
++ (id)getObjectValueFromKey:(NSString *)key;
+
++ (void)saveObjectValue:(id)object withKey:(NSString *)key;
++ (void)saveUserInfo:(NSDictionary *)dic;
++ (void)saveBooleanValue:(BOOL)boolean withKey:(NSString *)key;
 @end

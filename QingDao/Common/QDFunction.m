@@ -38,4 +38,62 @@
     
 }
 
+
++ (BOOL)getBooleaValueFromKey:(NSString *)key{
+    if (key != nil) {
+        return [[NSUserDefaults standardUserDefaults]boolForKey:key];
+        
+    }
+    else
+        return NULL;
+    
+}
+
++ (id)getObjectValueFromKey:(NSString *)key{
+ 
+    if (key != nil) {
+        return [[NSUserDefaults standardUserDefaults]objectForKey:key];
+    }
+    else
+        return NULL;
+}
+
+
++ (void)saveObjectValue:(id)object withKey:(NSString *)key{
+    
+    if (key != nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:object forKey:key];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        
+    }
+    
+}
+
++ (void)saveUserInfo:(NSDictionary *)dic{
+    
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"user.info"];
+    
+    [dic writeToFile:path atomically:YES];
+    
+}
++ (void)saveBooleanValue:(BOOL)boolean withKey:(NSString *)key{
+    
+    if (key != nil) {
+        [[NSUserDefaults standardUserDefaults] setBool:boolean forKey:key];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        
+    }
+    
+}
 @end
+
+
+
+
+
+
+
+
+
+
+

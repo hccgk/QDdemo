@@ -54,9 +54,10 @@
 -(void)loginMethod
 {
     QDLoginViewController *login = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"QDLoginViewController"];
-    AppDelegate *app = [UIApplication sharedApplication].delegate;
+     [self.navigationController pushViewController:login animated:YES];
+    AppDelegate *app = (AppDelegate*) [UIApplication sharedApplication].delegate;
     [app.tab showOrHiddenTabbarView:YES];
-    [self.navigationController pushViewController:login animated:YES];
+    
 }
 
 -(void)loadData

@@ -31,10 +31,25 @@
 #pragma mark --key-value
 
 #define kFirstLanuch @"kLFGuideVCFirstLanuch"
+#define kLogin_remember @"Login_remember"
+#define kLogin_userName @"Login_userName"
 
 #pragma mark --通知
 
 #define kNotificationGuideEnter @"kNotificationGuideEnter"
+
+
+/*
+ 宏定义    颜色值
+ */
+#pragma color
+
+#define kColor(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+
+#define kButtonColor [UIColor colorWithRed:45/255.0 green:156/255.0 blue:239/255.0 alpha:1.0]
+
+#define Login_Deep_Color    kColor(60, 168, 245)
+#define Login_Light_Color   kColor(103, 196, 255)
 
 #pragma mark -- 接口调试
 

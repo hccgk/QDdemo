@@ -46,6 +46,8 @@
 		0EAFF48C1C06A82900BC5416 /* QDFamousCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFF48A1C06A82900BC5416 /* QDFamousCollectionViewCell.xib */; };
 		0EAFF4901C06EEEA00BC5416 /* QDGuessTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF48E1C06EEEA00BC5416 /* QDGuessTableViewCell.m */; };
 		0EAFF4911C06EEEA00BC5416 /* QDGuessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFF48F1C06EEEA00BC5416 /* QDGuessTableViewCell.xib */; };
+		0EAFF4941C082C8900BC5416 /* QDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF4931C082C8900BC5416 /* QDUserInfo.m */; };
+		0EAFF4971C0840D000BC5416 /* QDThirdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF4961C0840D000BC5416 /* QDThirdCollectionViewCell.m */; };
 		0EE4DC931C034E9B00985CAC /* QDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */; };
 		0EE4DC971C03561600985CAC /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4DC961C03561600985CAC /* MD5.m */; };
 		0EFE13811C05B0DB000570B7 /* QDShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE13801C05B0DB000570B7 /* QDShopModel.m */; };
@@ -143,6 +145,10 @@
 		0EAFF48D1C06EEEA00BC5416 /* QDGuessTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDGuessTableViewCell.h; sourceTree = "<group>"; };
 		0EAFF48E1C06EEEA00BC5416 /* QDGuessTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDGuessTableViewCell.m; sourceTree = "<group>"; };
 		0EAFF48F1C06EEEA00BC5416 /* QDGuessTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QDGuessTableViewCell.xib; sourceTree = "<group>"; };
+		0EAFF4921C082C8900BC5416 /* QDUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDUserInfo.h; sourceTree = "<group>"; };
+		0EAFF4931C082C8900BC5416 /* QDUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDUserInfo.m; sourceTree = "<group>"; };
+		0EAFF4951C0840D000BC5416 /* QDThirdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDThirdCollectionViewCell.h; sourceTree = "<group>"; };
+		0EAFF4961C0840D000BC5416 /* QDThirdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDThirdCollectionViewCell.m; sourceTree = "<group>"; };
 		0EE4DC911C034E9B00985CAC /* QDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDLoginViewController.h; sourceTree = "<group>"; };
 		0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDLoginViewController.m; sourceTree = "<group>"; };
 		0EE4DC951C03561600985CAC /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
@@ -265,6 +271,10 @@
 				0E59003A1C0197EB006C155E /* QDGuideViewController.m */,
 				0EE4DC911C034E9B00985CAC /* QDLoginViewController.h */,
 				0EE4DC921C034E9B00985CAC /* QDLoginViewController.m */,
+				0EAFF4951C0840D000BC5416 /* QDThirdCollectionViewCell.h */,
+				0EAFF4961C0840D000BC5416 /* QDThirdCollectionViewCell.m */,
+				0EAFF4921C082C8900BC5416 /* QDUserInfo.h */,
+				0EAFF4931C082C8900BC5416 /* QDUserInfo.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -670,7 +680,9 @@
 				0E7C41A11C048152005B3FCA /* QDLocaltionManager.m in Sources */,
 				0E59000D1C0090B7006C155E /* QDBaseViewController.m in Sources */,
 				0EAFF4901C06EEEA00BC5416 /* QDGuessTableViewCell.m in Sources */,
+				0EAFF4941C082C8900BC5416 /* QDUserInfo.m in Sources */,
 				0EAFF48B1C06A82900BC5416 /* QDFamousCollectionViewCell.m in Sources */,
+				0EAFF4971C0840D000BC5416 /* QDThirdCollectionViewCell.m in Sources */,
 				0EFE13811C05B0DB000570B7 /* QDShopModel.m in Sources */,
 				0E7C41C11C05923B005B3FCA /* QDGroupCollectionViewCell.m in Sources */,
 				0E7C41B61C055557005B3FCA /* QDAdsTableViewCell.m in Sources */,
