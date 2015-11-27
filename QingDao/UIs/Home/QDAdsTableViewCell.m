@@ -123,7 +123,7 @@
 - (NSInteger)numberOfPlaceholdersInCarousel:(__unused iCarousel *)carousel
 {
     //note: placeholder views are only displayed on some carousels if wrapping is disabled
-    return 1;
+    return 2;
 }
 - (UIView *)carousel:(__unused iCarousel *)carousel placeholderViewAtIndex:(NSInteger)index reusingView:(UIView *)view
 {

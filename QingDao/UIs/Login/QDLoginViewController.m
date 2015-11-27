@@ -9,7 +9,8 @@
 #import "QDLoginViewController.h"
 #import "AppDelegate.h"
 #import "QDHTTPClient.h"
-
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
 #import "QDFunction.h"
 #import "SSKeychain.h"
 #import "QDUserInfo.h"
@@ -30,6 +31,7 @@ static NSString *identier = @"QDThirdCollectionViewCell";
 @property (weak, nonatomic) IBOutlet UIButton *forgetButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginInButton;
 @property (weak, nonatomic) IBOutlet UIButton *asignButton;
+@property (weak, nonatomic) IBOutlet UIButton *remembButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *thirdLabel;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
@@ -38,6 +40,9 @@ static NSString *identier = @"QDThirdCollectionViewCell";
 
 - (IBAction)remAction:(UIButton *)sender;
 - (IBAction)loginAction:(UIButton *)sender;
+- (IBAction)remembAction:(id)sender;
+
+- (IBAction)forgetAction:(id)sender;
 
 
 @property (nonatomic, strong) NSMutableArray *shareArray;
@@ -76,6 +81,7 @@ static NSString *identier = @"QDThirdCollectionViewCell";
     _userView.layer.cornerRadius = 5;
     _userView.clipsToBounds = YES;
     _userLoginImageView.backgroundColor = Login_Deep_Color;
+    _userLoginTextField.clipsToBounds = YES;
     _userLoginTextField.backgroundColor = Login_Light_Color;
     
     _passwordView.backgroundColor = Login_Light_Color;
@@ -86,13 +92,20 @@ static NSString *identier = @"QDThirdCollectionViewCell";
     
     [_remButton setTitleColor:Login_Light_Color forState:UIControlStateNormal];
     [_forgetButton setTitleColor:Login_Light_Color forState:UIControlStateNormal];
+    [_remembButton setTitleColor:Login_Light_Color forState:UIControlStateNormal];
     //下划线
     NSMutableAttributedString *str =[[NSMutableAttributedString alloc]initWithString:@"忘记密码"];
     NSRange strRange = {0,str.length};
     [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:1] range:strRange];
-    [str addAttribute:NSForegroundColorAttributeName value:[UIColor lightGrayColor] range:strRange];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.131 green:0.183 blue:0.942 alpha:1.000] range:strRange];
+    NSMutableAttributedString *str1 =[[NSMutableAttributedString alloc]initWithString:@"记住密码"];
+    NSRange strRange1 = {0,str1.length};
+    [str1 addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:1] range:strRange1];
+    [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.131 green:0.183 blue:0.942 alpha:1.000] range:strRange1];
+
     
     [_forgetButton setAttributedTitle:str forState:UIControlStateNormal];
+    [_remembButton setAttributedTitle:str1 forState:UIControlStateNormal];
     
     _loginInButton.backgroundColor = Login_Deep_Color;
     _loginInButton.layer.cornerRadius = 5;
@@ -205,10 +218,74 @@ static NSString *identier = @"QDThirdCollectionViewCell";
 }
 
 
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+   
+    
+    if (indexPath.row == 1) {
+            //例如QQ的登录
+    [ShareSDK getUserInfo:SSDKPlatformTypeQQ
+           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+     {
+         if (state == SSDKResponseStateSuccess)
+         {
+             
+             NSLog(@"uid=%@",user.uid);
+             NSLog(@"%@",user.credential);
+             NSLog(@"token=%@",user.credential.token);
+             NSLog(@"nickname=%@",user.nickname);
+         }
+         
+         else
+         {
+             NSLog(@"%@",error);
+         }
+         
+     }];
+        
+    } else if(indexPath.row == 0)
+    {
+        [ShareSDK getUserInfo:SSDKPlatformTypeSinaWeibo
+               onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+         {
+             if (state == SSDKResponseStateSuccess)
+             {
+                 
+                 NSLog(@"uid=%@",user.uid);
+                 NSLog(@"%@",user.credential);
+                 NSLog(@"token=%@",user.credential.token);
+                 NSLog(@"nickname=%@",user.nickname);
+             }
+             
+             else
+             {
+                 NSLog(@"%@",error);
+             }
+             
+         }];
+    }else if(indexPath.row == 2)
+    {
+        [ShareSDK getUserInfo:SSDKPlatformTypeWechat
+               onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+         {
+             if (state == SSDKResponseStateSuccess)
+             {
+                 
+                 NSLog(@"uid=%@",user.uid);
+                 NSLog(@"%@",user.credential);
+                 NSLog(@"token=%@",user.credential.token);
+                 NSLog(@"nickname=%@",user.nickname);
+             }
+             
+             else
+             {
+                 NSLog(@"%@",error);
+             }
+             
+         }];
+    }
+
+}
 
 
 
@@ -264,5 +341,28 @@ static NSString *identier = @"QDThirdCollectionViewCell";
         [self showToast:message];
     }];
 
+}
+
+- (IBAction)remembAction:(id)sender {
+    
+    _remButton.selected = !_remButton.selected;
+    
+    if (_remButton.selected) {
+        //
+        [_remButton setBackgroundImage:[UIImage imageNamed:@"btn_selected"] forState:UIControlStateNormal];
+        _remButton.selected = YES;
+    }else
+    {
+        [_remButton setBackgroundImage:[UIImage imageNamed:@"btn_normal"] forState:UIControlStateNormal];
+        _remButton.selected = NO;
+    }
+    
+    [QDFunction saveBooleanValue:_remButton.selected withKey:kLogin_remember];
+}
+
+- (IBAction)forgetAction:(id)sender {
+    [_remButton setBackgroundImage:[UIImage imageNamed:@"btn_normal"] forState:UIControlStateNormal];
+    _remButton.selected = NO;
+    
 }
 @end
